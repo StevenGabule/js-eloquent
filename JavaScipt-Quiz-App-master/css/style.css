@@ -1,0 +1,37 @@
+body {
+	font-family: "helvetica Neue";
+	font-size:14px;
+	line-height: 1.5em;
+	background-color: #f4f4f4;
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	width: 70%;
+	margin:20px auto;
+	overflow: auto;
+}
+
+.pull-left { float: left; }
+.pull-right { float: right; }
+
+header,footer {
+	background-color: #1f88f4;
+	color:#fff;
+	padding: 5px 10px;
+	overflow: auto;
+	font-size: 16px;
+}
+
+footer {
+	font-size: 14px;
+}
+
+@media only screen and (max-width:900px) {
+	.container {
+		width: 90%;
+	}
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Browser coding</title>
+</head>
+<body>
+<!--<p>one</p>
+<p>two</p>
+<p>three</p>-->
+<!--<p>The <img src="img/cat.jpg" alt="Cat"> in the <img src="img/hot.jpg" alt="Hat">.</p>
+<p><button onclick="replaceImages()">Replace</button></p>-->
+
+<blockquote id="quote">
+    No book can ever be finished. While working on it
+    we learn just enough to find it immature the
+    moment we turn away from it.
+</blockquote>
+
+
+<script>
+    /*let paragraphs = document.body.getElementsByTagName("p");
+    document.body.insertBefore(paragraphs[2], paragraphs[0]);*/
+
+    /*    function replaceImages() {
+            let images = document.body.getElementsByTagName("img");
+            for (let i = images.length - 1; i >= 0; i--) {
+                let image = images[i];
+                if (image.alt) {
+                    let text = document.createTextNode(image.alt);
+                    image.parentNode.replaceChild(text, image);
+                }
+            }
+        }*/
+
+    function elt(type) {
+        let node = document.createElement(type);
+        for (let i = 1; i < arguments.length; i++) {
+            let child = arguments[i];
+            if (typeof child === "string") child = document.createTextNode(child);
+            node.appendChild(child);
+        }
+        return node;
+    }
+
+    document.getElementById("quote").appendChild(
+        elt("footer", "--",
+            elt("strong", "Karl Popper"), ", preface to the second edition of ",
+            elt("em", "The Open Society and Its Enemies"), ", 1950"));
+</script>
+</body>
+</html>

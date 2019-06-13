@@ -1,0 +1,33 @@
+Binary Search Tree Algorithm
+- runaway reservation system
+    -> Airport with a simple runway:
+    -> Reserve request for future landings
+    -> Reserve request specifies landing time t
+    -> Add t to the set R if no other landings are schedule within R min
+    Remove from set R after plane lands.
+
+    |R| = n
+    O(lgn) time
+    Example:
+        41.2   49     56.3
+    -----|-----|-------|----> Time
+    |
+  Now->37      53     ok
+               44     not allowed
+               20     not allowed(past) 
+    Unsorted List/Array:
+    Insert in o(i) w/o check
+
+
+    Sorted Array:
+                4 20 32 | 37 45
+                1 2  3  | 4  5
+        Find  smallest i such that R[i] >= t in o(lgn) Time
+        Compare R[i] and R[i-1] against t in o(i) time
+
+    (|) Actual insertion (shifting) -> o(n) time
+    Sorted list:
+
+    Heaps: min/max
+    => element that is <= k or >= k from t O(n) time
+    
