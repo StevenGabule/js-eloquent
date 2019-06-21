@@ -6,15 +6,18 @@ rabbit.speak = function(line) {
 rabbit.speak("Hello, Programming");*/
 
 /*
+
 function speak(line) {
     console.log("The " + this.type + " rabbit says '" + line + "'");
 }
 
 let whiteRabbit = { type: 'white', speak: speak };
 let fatRabbit = { type: 'fat', speak: speak };
+
+
 */
 
-/*whiteRabbit.speak("White and cute , Work hard works");
+/* whiteRabbit.speak("White and cute , Work hard works");
 fatRabbit.speak("Lovable fat The weather is kind and nice today");*/
 
 /*speak.apply(fatRabbit, ["Burp!"]);
@@ -131,15 +134,25 @@ UnderlineCell.prototype.draw = function(width, height) {
 };
 
 function dataTables(data) {
+
     var keys = Object.keys(data[0]);
+
     var headers = keys.map(function(name) {
+
         return new UnderlineCell(new TextCell(name));
+        
     });
+
     var body = data.map(function(row) {
+
         return keys.map(function(name) {
+
             return new TextCell(String(row[name]));
+
         });
+
     });
+
     return [headers].concat(body);
 }
 
